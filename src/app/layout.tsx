@@ -57,7 +57,7 @@ export default function RootLayout({
         "@id": "https://servicecomputer.ro/#organization",
         "name": "COMPUTER SHOP and SERVICE",
         "image": "https://servicecomputer.ro/logo.png",
-        "telephone": "0726116356",
+        "telephone": "+40770198233",
         "email": "office@servicecomputer.ro",
         "url": "https://servicecomputer.ro",
         "priceRange": "$$",
@@ -85,7 +85,7 @@ export default function RootLayout({
         "@type": "LocalBusiness",
         "@id": "https://servicecomputer.ro/#sector2",
         "name": "COMPUTER SHOP and SERVICE - Sector 2",
-        "telephone": "0726141301",
+        "telephone": "+40770198233",
         "email": "office@servicecomputer.ro",
         "address": {
           "@type": "PostalAddress",

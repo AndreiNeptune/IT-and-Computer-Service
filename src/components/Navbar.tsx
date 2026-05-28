@@ -47,11 +47,11 @@ export default function Navbar() {
               <span>office@servicecomputer.ro</span>
             </a>
             <a
-              href="tel:0726116356"
+              href="tel:0770198233"
               className="flex items-center gap-1.5 hover:text-blue-400 transition-colors font-medium"
             >
               <Phone className="w-4 h-4 text-blue-500" />
-              <span>0726 116 356</span>
+              <span>+40 770 198 233</span>
             </a>
           </div>
           <div className="hidden sm:flex items-center gap-4">

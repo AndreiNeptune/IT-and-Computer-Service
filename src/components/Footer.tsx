@@ -121,7 +121,7 @@ export default function Footer() {
                 <div>
                   <p className="font-bold text-slate-200">Sector 2</p>
                   <p className="text-xs text-slate-400 mt-0.5">Bulevardul Chișinău nr. 12</p>
-                  <p className="text-[10px] text-slate-500 mt-0.5">Tel: 0726 141 301 / 0766 093 309</p>
+                  <p className="text-[10px] text-slate-500 mt-0.5">Tel: +40 770 198 233</p>
                 </div>
               </div>
               <div className="flex items-start gap-2.5">
@@ -129,7 +129,7 @@ export default function Footer() {
                 <div>
                   <p className="font-bold text-slate-200">Sector 4</p>
                   <p className="text-xs text-slate-400 mt-0.5">Bd. C-tin Brâncoveanu nr. 15, Bl. B17, parter</p>
-                  <p className="text-[10px] text-slate-500 mt-0.5">Tel: 0726 116 356</p>
+                  <p className="text-[10px] text-slate-500 mt-0.5">Tel: +40 770 198 233</p>
                 </div>
               </div>
             </div>
