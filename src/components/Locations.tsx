@@ -13,6 +13,7 @@ export default function Locations() {
       schedule: "Luni – Vineri: 9:00 – 17:30",
       weekend: "Sâmbătă – Duminică: Închis",
       mapsUrl: "https://maps.google.com/?q=Bulevardul+Chisinau+12+Bucuresti",
+      embedUrl: "https://maps.google.com/maps?q=Bulevardul%20Chisinau%2012,%20Bucuresti&t=&z=15&ie=UTF8&iwloc=&output=embed",
     },
     {
       sector: "Sector 4",
@@ -22,6 +23,7 @@ export default function Locations() {
       schedule: "Luni – Vineri: 9:00 – 17:30",
       weekend: "Sâmbătă – Duminică: Închis",
       mapsUrl: "https://maps.google.com/?q=Bulevardul+Constantin+Brancoveanu+15+Bucuresti",
+      embedUrl: "https://maps.google.com/maps?q=Bulevardul%20Constantin%20Brancoveanu%2015,%20Bucuresti&t=&z=15&ie=UTF8&iwloc=&output=embed",
     },
   ];
 
@@ -102,6 +104,21 @@ export default function Locations() {
                       <p className="text-xs text-slate-400 dark:text-slate-500 mt-0.5 italic">{loc.weekend}</p>
                     </div>
                   </div>
+                </div>
+
+                {/* Interactive Map */}
+                <div className="mt-6 w-full h-48 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-inner relative group/map">
+                  <iframe
+                    src={loc.embedUrl}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={loc.title}
+                    className="w-full h-full grayscale opacity-80 dark:opacity-75 dark:invert contrast-[0.85] dark:contrast-[0.9] hover:grayscale-0 hover:opacity-100 dark:hover:opacity-90 dark:hover:invert-0 transition-all duration-500"
+                  />
                 </div>
               </div>
 
