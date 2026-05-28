@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
 import { Phone, Mail, Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,13 +24,13 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "Reparații Laptop", href: "#laptop-repairs" },
-    { label: "Reparații Calculatoare", href: "#pc-repairs" },
-    { label: "Servicii IT", href: "#it-services" },
-    { label: "Pick-Up & Return", href: "#pickup-return" },
-    { label: "Galerie Foto", href: "#gallery" },
-    { label: "Blog", href: "#blog" },
-    { label: "Contact", href: "#contact" },
+    { label: "Acasă", href: "/" },
+    { label: "Reparații Laptop", href: "/reparatii-laptop" },
+    { label: "Reparații Calculatoare", href: "/reparatii-calculatoare" },
+    { label: "Instalare Windows", href: "/instalare-windows" },
+    { label: "Galerie Foto", href: "/galerie" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -95,7 +96,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             {/* Logo Swirl & Name */}
-            <a href="#" className="flex items-center gap-3 group">
+            <Link href="/" className="flex items-center gap-3 group">
               <div className="relative w-10 h-10 flex items-center justify-center">
                 {/* SVG circular loop/swirl logo as described */}
                 <svg
@@ -139,19 +140,19 @@ export default function Navbar() {
                   and SERVICE
                 </span>
               </div>
-            </a>
+            </Link>
 
             {/* Desktop Navigation Links */}
             <div className="hidden lg:flex items-center gap-6">
               <ul className="flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
                 {navLinks.map((link) => (
                   <li key={link.href}>
-                    <a
+                    <Link
                       href={link.href}
                       className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 hover:after:w-full after:transition-all"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -159,12 +160,12 @@ export default function Navbar() {
               {/* Theme toggle & CTA Button */}
               <div className="flex items-center gap-4 pl-4 border-l border-slate-200 dark:border-slate-800">
                 <ThemeToggle />
-                <a
-                  href="#pickup-return"
+                <Link
+                  href="/contact"
                   className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-2.5 px-5 rounded-xl shadow-lg shadow-blue-500/20 dark:shadow-blue-900/30 hover:shadow-xl transition-all hover:-translate-y-0.5 text-sm"
                 >
                   PICK-UP & RETURN GRATUIT
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -195,24 +196,24 @@ export default function Navbar() {
             <ul className="space-y-3 text-base font-semibold text-slate-700 dark:text-slate-300">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     onClick={() => setIsOpen(false)}
                     className="block p-2 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-xl hover:text-blue-600 dark:hover:text-blue-400 transition-all"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
             <div className="pt-4 border-t border-slate-200 dark:border-slate-800">
-              <a
-                href="#pickup-return"
+              <Link
+                href="/contact"
                 onClick={() => setIsOpen(false)}
                 className="w-full text-center block bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold py-3 px-5 rounded-xl shadow-lg transition-all"
               >
                 PICK-UP & RETURN GRATUIT
-              </a>
+              </Link>
             </div>
           </div>
         </div>
