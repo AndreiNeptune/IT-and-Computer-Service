@@ -3,7 +3,11 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { PostHogProvider } from "@/components/PostHogProvider";
-
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
+import BackToTop from "@/components/BackToTop";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 const outfit = Outfit({
   subsets: ["latin"],
   display: "swap",
@@ -136,7 +140,14 @@ export default function RootLayout({
       <body className="min-h-full bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 flex flex-col font-sans transition-colors duration-300">
         <PostHogProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            {children}
+            <Navbar />
+            <main className="flex-1">
+              {children}
+            </main>
+            <Footer />
+            <CookieBanner />
+            <BackToTop />
+            <StickyMobileCTA />
           </ThemeProvider>
         </PostHogProvider>
       </body>
