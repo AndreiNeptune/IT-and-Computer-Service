@@ -1,0 +1,177 @@
+import { Mail, Phone, MapPin, ShieldCheck } from "lucide-react";
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="bg-slate-950 text-slate-400 pt-16 pb-8 border-t border-slate-900 transition-colors">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+          
+          {/* Company Bio */}
+          <div className="space-y-4">
+            <a href="#" className="flex items-center gap-2 group">
+              <svg
+                className="w-8 h-8"
+                viewBox="0 0 100 100"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  stroke="url(#swirlGradFooter)"
+                  strokeWidth="8"
+                  strokeLinecap="round"
+                  strokeDasharray="180 60"
+                />
+                <path
+                  d="M50 20 C60 20, 70 30, 70 50 C70 70, 50 80, 40 70 C30 60, 30 40, 50 30"
+                  stroke="url(#swirlGradFooter)"
+                  strokeWidth="6"
+                  strokeLinecap="round"
+                  fill="none"
+                />
+                <defs>
+                  <linearGradient id="swirlGradFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#3b82f6" />
+                    <stop offset="50%" stopColor="#8b5cf6" />
+                    <stop offset="100%" stopColor="#ec4899" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div className="flex flex-col">
+                <span className="font-extrabold text-sm sm:text-base tracking-tight leading-none text-white">
+                  COMPUTER SHOP
+                </span>
+                <span className="text-[9px] font-bold tracking-widest text-slate-500 uppercase leading-none mt-0.5">
+                  and SERVICE
+                </span>
+              </div>
+            </a>
+            <p className="text-xs sm:text-sm leading-relaxed text-slate-400">
+              Oferim reparații și servicii IT la cel mai înalt nivel profesional, folosind dotări moderne și piese de înaltă calitate. Siguranța și performanța echipamentului tău sunt prioritatea noastră.
+            </p>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-slate-900 hover:bg-slate-800 rounded-lg text-slate-300 hover:text-blue-500 transition-colors hover:scale-110"
+                aria-label="Facebook Link"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
+                </svg>
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-slate-900 hover:bg-slate-800 rounded-lg text-slate-300 hover:text-pink-500 transition-colors hover:scale-110"
+                aria-label="Instagram Link"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fillRule="evenodd" d="M12 2c2.717 0 3.056.01 4.122.058 1.065.048 1.79.217 2.428.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.637.416 1.363.465 2.428.047 1.066.058 1.405.058 4.122 0 2.717-.01 3.056-.058 4.122-.048 1.065-.217 1.79-.465 2.428a4.88 4.88 0 01-1.153 1.772 4.88 4.88 0 01-1.772 1.153c-.637.247-1.363.416-2.428.465-1.066.047-1.405.058-4.122.058-2.717 0-3.056-.01-4.122-.058-1.065-.048-1.79-.217-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.9 4.9 0 01-1.153-1.772c-.247-.637-.416-1.363-.465-2.428C2.01 15.056 2 14.717 2 12c0-2.717.01-3.056.058-4.122.048-1.065.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.637-.247 1.363-.416 2.428-.465C8.944 2.01 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm5.337-8.337a1 1 0 100 2 1 1 0 000-2z" clipRule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-extrabold text-white text-base mb-4 uppercase tracking-wider text-xs">
+              Link-uri Rapide
+            </h4>
+            <ul className="space-y-2.5 text-xs sm:text-sm">
+              <li>
+                <a href="#services" className="hover:text-white transition-colors">Reparații Laptop</a>
+              </li>
+              <li>
+                <a href="#services" className="hover:text-white transition-colors">Reparații Calculatoare</a>
+              </li>
+              <li>
+                <a href="#services" className="hover:text-white transition-colors">Servicii Software &amp; IT</a>
+              </li>
+              <li>
+                <a href="#windows-home" className="hover:text-white transition-colors">Instalare Windows</a>
+              </li>
+              <li>
+                <a href="#pickup-return" className="hover:text-white transition-colors">Pick-Up &amp; Return</a>
+              </li>
+              <li>
+                <a href="#gallery" className="hover:text-white transition-colors">Galerie Foto</a>
+              </li>
+              <li>
+                <a href="#blog" className="hover:text-white transition-colors">Articole Blog</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Locations Short */}
+          <div>
+            <h4 className="font-extrabold text-white text-base mb-4 uppercase tracking-wider text-xs">
+              Locațiile Noastre
+            </h4>
+            <div className="space-y-4 text-xs sm:text-sm">
+              <div className="flex items-start gap-2.5">
+                <MapPin className="w-4.5 h-4.5 text-blue-500 shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-bold text-slate-200">Sector 2</p>
+                  <p className="text-xs text-slate-400 mt-0.5">Bulevardul Chișinău nr. 12</p>
+                  <p className="text-[10px] text-slate-500 mt-0.5">Tel: 0726 141 301 / 0766 093 309</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-2.5">
+                <MapPin className="w-4.5 h-4.5 text-blue-500 shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-bold text-slate-200">Sector 4</p>
+                  <p className="text-xs text-slate-400 mt-0.5">Bd. C-tin Brâncoveanu nr. 15, Bl. B17, parter</p>
+                  <p className="text-[10px] text-slate-500 mt-0.5">Tel: 0726 116 356</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Schedule Summary */}
+          <div>
+            <h4 className="font-extrabold text-white text-base mb-4 uppercase tracking-wider text-xs">
+              Program Servicii
+            </h4>
+            <ul className="space-y-3 text-xs sm:text-sm">
+              <li>
+                <p className="font-bold text-slate-200">Luni – Vineri</p>
+                <p className="text-xs text-slate-400 mt-0.5">09:00 – 17:30 (Ambele locații)</p>
+              </li>
+              <li>
+                <p className="font-bold text-slate-200">Sâmbătă – Duminică</p>
+                <p className="text-xs text-rose-400 mt-0.5 italic">Închis</p>
+              </li>
+              <li className="pt-2 border-t border-slate-900 flex items-center gap-2 text-xs font-semibold text-emerald-400">
+                <ShieldCheck className="w-4 h-4 shrink-0" />
+                Fără costuri ascunse
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        {/* Footer bottom bar */}
+        <div className="pt-8 mt-8 border-t border-slate-900/80 text-center flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+          <p>
+            Copyright &copy; {currentYear} COMPUTER SHOP &amp; SERVICE. Toate drepturile rezervate.
+          </p>
+          <div className="flex gap-4">
+            <a href="#" className="hover:text-white transition-colors">Politică de Confidențialitate</a>
+            <span>&bull;</span>
+            <a href="#" className="hover:text-white transition-colors">Termeni și Condiții</a>
+            <span>&bull;</span>
+            <a href="#" className="hover:text-white transition-colors">ANPC</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  );
+}
