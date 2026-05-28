@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Info, X } from "lucide-react";
+import Link from "next/link";
 
 export default function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
@@ -41,12 +42,12 @@ export default function CookieBanner() {
         </div>
 
         <div className="flex items-center justify-end gap-3 pt-1">
-          <a
-            href="#"
+          <Link
+            href="/"
             className="text-xs font-semibold text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
           >
             Politică de confidențialitate
-          </a>
+          </Link>
           <button
             onClick={handleAccept}
             className="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-4 py-2 rounded-xl transition-all cursor-pointer shadow-md shadow-blue-500/10"

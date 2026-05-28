@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Calendar, User, Clock, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Blog() {
   const articles = [
@@ -90,13 +91,13 @@ export default function Blog() {
                     {art.author}
                   </span>
                 </div>
-                <a
-                  href="#contact"
+                <Link
+                  href="/contact"
                   className="text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1 group/btn"
                 >
                   Citește
                   <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" />
-                </a>
+                </Link>
               </div>
             </motion.article>
           ))}

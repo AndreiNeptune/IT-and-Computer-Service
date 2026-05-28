@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, ShieldCheck } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,7 +11,7 @@ export default function Footer() {
           
           {/* Company Bio */}
           <div className="space-y-4">
-            <a href="#" className="flex items-center gap-2 group">
+            <Link href="/" className="flex items-center gap-2 group">
               <svg
                 className="w-8 h-8"
                 viewBox="0 0 100 100"
@@ -49,7 +50,7 @@ export default function Footer() {
                   and SERVICE
                 </span>
               </div>
-            </a>
+            </Link>
             <p className="text-xs sm:text-sm leading-relaxed text-slate-400">
               Oferim reparații și servicii IT la cel mai înalt nivel profesional, folosind dotări moderne și piese de înaltă calitate. Siguranța și performanța echipamentului tău sunt prioritatea noastră.
             </p>
@@ -86,25 +87,25 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               <li>
-                <a href="#services" className="hover:text-white transition-colors">Reparații Laptop</a>
+                <Link href="/reparatii-laptop" className="hover:text-white transition-colors">Reparații Laptop</Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition-colors">Reparații Calculatoare</a>
+                <Link href="/reparatii-calculatoare" className="hover:text-white transition-colors">Reparații Calculatoare</Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition-colors">Servicii Software &amp; IT</a>
+                <Link href="/reparatii-laptop" className="hover:text-white transition-colors">Servicii Software &amp; IT</Link>
               </li>
               <li>
-                <a href="#windows-home" className="hover:text-white transition-colors">Instalare Windows</a>
+                <Link href="/instalare-windows" className="hover:text-white transition-colors">Instalare Windows</Link>
               </li>
               <li>
-                <a href="#pickup-return" className="hover:text-white transition-colors">Pick-Up &amp; Return</a>
+                <Link href="/contact" className="hover:text-white transition-colors">Pick-Up &amp; Return</Link>
               </li>
               <li>
-                <a href="#gallery" className="hover:text-white transition-colors">Galerie Foto</a>
+                <Link href="/galerie" className="hover:text-white transition-colors">Galerie Foto</Link>
               </li>
               <li>
-                <a href="#blog" className="hover:text-white transition-colors">Articole Blog</a>
+                <Link href="/blog" className="hover:text-white transition-colors">Articole Blog</Link>
               </li>
             </ul>
           </div>
@@ -163,11 +164,11 @@ export default function Footer() {
             Copyright &copy; {currentYear} COMPUTER SHOP &amp; SERVICE. Toate drepturile rezervate.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-white transition-colors">Politică de Confidențialitate</a>
+            <Link href="#" className="hover:text-white transition-colors">Politică de Confidențialitate</Link>
             <span>&bull;</span>
-            <a href="#" className="hover:text-white transition-colors">Termeni și Condiții</a>
+            <Link href="#" className="hover:text-white transition-colors">Termeni și Condiții</Link>
             <span>&bull;</span>
-            <a href="#" className="hover:text-white transition-colors">ANPC</a>
+            <Link href="#" className="hover:text-white transition-colors">ANPC</Link>
           </div>
         </div>
 

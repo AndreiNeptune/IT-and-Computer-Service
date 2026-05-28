@@ -1,6 +1,7 @@
 "use client";
 
 import { Phone, Calendar } from "lucide-react";
+import Link from "next/link";
 
 export default function StickyMobileCTA() {
   return (
@@ -15,13 +16,13 @@ export default function StickyMobileCTA() {
       </a>
 
       {/* Book Button */}
-      <a
-        href="#contact"
+      <Link
+        href="/contact"
         className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-3 px-4 rounded-xl text-xs transition-all shadow-md shadow-blue-500/10"
       >
         <Calendar className="w-4 h-4" />
         Programare
-      </a>
+      </Link>
     </div>
   );
 }

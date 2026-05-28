@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Check, ShieldAlert, Cpu, HardDrive, Smartphone, ShieldCheck, Zap, HelpCircle } from "lucide-react";
+import Link from "next/link";
 
 export default function WindowsHome() {
   const standardPackage = [
@@ -96,12 +97,12 @@ export default function WindowsHome() {
                 <p className="text-xs text-slate-400 uppercase font-bold">Tarif Standard</p>
                 <p className="text-2xl font-black text-white">de la 200 RON</p>
               </div>
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-md shadow-blue-500/20"
               >
                 Programează Vizită
-              </a>
+              </Link>
             </div>
           </motion.div>
 

@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect } from "react";
 import { servicesData, badgeGuides, ServiceItem } from "@/data/services";
 import { Search, Laptop, Monitor, HelpCircle, Sparkles, X } from "lucide-react";
 import Fuse from "fuse.js";
+import Link from "next/link";
 
 type CategoryType = "laptop" | "calculator" | "servicii-it";
 
@@ -179,9 +180,9 @@ export default function ServicesTabs() {
                   </div>
                   <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-900/50 flex justify-between items-center text-xs font-bold text-blue-600 dark:text-blue-400">
                     <span>Garanție Inclusă</span>
-                    <a href="#contact" className="hover:underline flex items-center gap-1">
+                    <Link href="/contact" className="hover:underline flex items-center gap-1">
                       Cere Preț &rarr;
-                    </a>
+                    </Link>
                   </div>
                 </div>
               ))}

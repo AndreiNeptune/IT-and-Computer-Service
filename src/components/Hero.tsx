@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Laptop, Monitor } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -63,19 +64,19 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
           >
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="group inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-2xl shadow-xl shadow-blue-500/20 hover:shadow-2xl hover:shadow-blue-500/30 transition-all hover:-translate-y-0.5 text-base"
             >
               Programează o Reparație
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a
-              href="#windows-home"
+            </Link>
+            <Link
+              href="/instalare-windows"
               className="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 font-bold py-4 px-8 rounded-2xl transition-all hover:-translate-y-0.5 text-base"
             >
               Instalare Windows la Domiciliu
-            </a>
+            </Link>
           </motion.div>
         </div>
 
