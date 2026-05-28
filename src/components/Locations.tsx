@@ -66,7 +66,7 @@ export default function Locations() {
                   {loc.title}
                 </h4>
 
-                <div className="space-y-5 text-slate-600 dark:text-slate-300 mb-8">
+                <div className="space-y-5 text-slate-600 dark:text-slate-300 mb-8 min-h-[250px] sm:min-h-[210px] md:min-h-[190px]">
                   {/* Address */}
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5.5 h-5.5 text-blue-500 shrink-0 mt-0.5" />
