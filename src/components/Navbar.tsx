@@ -8,12 +8,13 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Detect scroll to style navbar differently
+  // Detect scroll to style navbar differently with hysteresis to prevent flickering
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 40) {
+      const scrollY = window.scrollY;
+      if (scrollY > 40) {
         setIsScrolled(true);
-      } else {
+      } else if (scrollY < 37) {
         setIsScrolled(false);
       }
     };
@@ -33,7 +34,9 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="w-full z-50">
+      <header className={`sticky top-0 z-50 w-full transition-transform duration-300 ease-in-out ${
+        isScrolled ? "-translate-y-10" : "translate-y-0"
+      }`}>
         {/* Top Info Bar */}
         <div className="w-full bg-slate-900 text-slate-300 py-2.5 px-4 sm:px-6 lg:px-8 text-sm border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2">
@@ -86,9 +89,7 @@ export default function Navbar() {
       {/* Main Sticky Navbar */}
       <nav
         className={`w-full bg-white/95 dark:bg-slate-950/95 backdrop-blur-md transition-all duration-300 border-b border-slate-200 dark:border-slate-800 ${
-          isScrolled
-            ? "fixed top-0 left-0 right-0 z-50 shadow-md py-3"
-            : "relative py-4"
+          isScrolled ? "py-3 shadow-md" : "py-4"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -217,7 +218,6 @@ export default function Navbar() {
         </div>
       </nav>
     </header>
-    {isScrolled && <div className="h-[74px]" />}
     </>
   );
 }
