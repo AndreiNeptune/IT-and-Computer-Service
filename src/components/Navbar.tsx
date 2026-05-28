@@ -38,7 +38,7 @@ export default function Navbar() {
         className={`w-full bg-slate-900 text-slate-300 text-sm border-b border-slate-800 transition-all duration-300 ease-in-out overflow-hidden ${
           isScrolled
             ? "max-h-0 py-0 opacity-0 border-b-0"
-            : "max-h-[50px] py-2.5 opacity-100"
+            : "max-h-[100px] sm:max-h-[50px] py-2.5 opacity-100"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2">
@@ -58,8 +58,8 @@ export default function Navbar() {
               <span>0726 116 356</span>
             </a>
           </div>
-          <div className="flex items-center gap-4">
-            <span className="text-slate-400 hidden sm:inline">Urmărește-ne:</span>
+          <div className="hidden sm:flex items-center gap-4">
+            <span className="text-slate-400">Urmărește-ne:</span>
             <div className="flex items-center gap-3">
               <a
                 href="https://facebook.com"
