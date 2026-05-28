@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 import BackToTop from "@/components/BackToTop";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 const outfit = Outfit({
   subsets: ["latin"],
   display: "swap",
@@ -148,6 +149,7 @@ export default function RootLayout({
             <CookieBanner />
             <BackToTop />
             <StickyMobileCTA />
+            <WhatsAppWidget />
           </ThemeProvider>
         </PostHogProvider>
       </body>
