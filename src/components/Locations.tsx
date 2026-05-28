@@ -50,12 +50,12 @@ export default function Locations() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: idx * 0.15 }}
-              className="bg-white dark:bg-slate-950 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-lg relative overflow-hidden group hover:shadow-xl hover:border-slate-300 dark:hover:border-slate-700 transition-all flex flex-col justify-between"
+              className="bg-white dark:bg-slate-950 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-lg relative overflow-hidden group hover:shadow-xl hover:border-slate-300 dark:hover:border-slate-700 transition-all flex flex-col h-full"
             >
               {/* Subtle background color accent on hover */}
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-blue-500 to-indigo-500" />
               
-              <div>
+              <div className="flex-grow flex flex-col">
                 <div className="flex justify-between items-start mb-6">
                   <span className="inline-block bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-extrabold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
                     {loc.sector}
@@ -66,7 +66,7 @@ export default function Locations() {
                   {loc.title}
                 </h4>
 
-                <div className="space-y-5 text-slate-600 dark:text-slate-300 mb-8 min-h-[250px] sm:min-h-[210px] md:min-h-[190px]">
+                <div className="space-y-5 text-slate-600 dark:text-slate-300 mb-8 flex-grow">
                   {/* Address */}
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5.5 h-5.5 text-blue-500 shrink-0 mt-0.5" />
@@ -105,21 +105,21 @@ export default function Locations() {
                     </div>
                   </div>
                 </div>
+              </div>
 
-                {/* Interactive Map */}
-                <div className="mt-6 w-full h-48 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-inner relative group/map">
-                  <iframe
-                    src={loc.embedUrl}
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen={false}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title={loc.title}
-                    className="w-full h-full grayscale opacity-80 dark:opacity-75 dark:invert contrast-[0.85] dark:contrast-[0.9] hover:grayscale-0 hover:opacity-100 dark:hover:opacity-90 dark:hover:invert-0 transition-all duration-500"
-                  />
-                </div>
+              {/* Interactive Map */}
+              <div className="w-full h-48 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-inner relative group/map mb-6">
+                <iframe
+                  src={loc.embedUrl}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={false}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title={loc.title}
+                  className="w-full h-full grayscale opacity-80 dark:opacity-75 dark:invert contrast-[0.85] dark:contrast-[0.9] hover:grayscale-0 hover:opacity-100 dark:hover:opacity-90 dark:hover:invert-0 transition-all duration-500"
+                />
               </div>
 
               <div className="pt-6 border-t border-slate-100 dark:border-slate-900 flex flex-col sm:flex-row gap-3">
