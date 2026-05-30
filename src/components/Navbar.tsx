@@ -34,7 +34,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ease-out ${isScrolled ? "bg-white/95 dark:bg-slate-950/95 backdrop-blur-md shadow-md border-b border-slate-200 dark:border-slate-800" : "bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800"}`}>
+    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ease-out ${isScrolled ? "bg-white/95 dark:bg-slate-950/95 backdrop-blur-md shadow-md border-b border-slate-200 dark:border-slate-800" : "bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800"}`}>
       {/* Top Info Bar - Collapses on scroll */}
       <div className={`w-full bg-slate-900 text-slate-300 transition-all duration-300 overflow-hidden ${isScrolled ? "h-0 opacity-0" : "h-auto py-2 opacity-100"}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs font-medium tracking-wide">
