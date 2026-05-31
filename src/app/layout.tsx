@@ -147,7 +147,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 flex flex-col font-sans">
         <PostHogProvider>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             <div className="relative flex min-h-screen flex-col bg-white dark:bg-slate-950">
               <Navbar />
               <main className="flex-1">
