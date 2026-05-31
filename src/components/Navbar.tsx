@@ -31,7 +31,7 @@ export default function Navbar() {
   return (
     <>
       {/* Top Bar Discret (Desktop) */}
-      <div className="hidden md:flex h-9 bg-slate-100 dark:bg-[#030712] border-b border-slate-200 dark:border-white/[0.02] transition-colors duration-300">
+      <div className="hidden md:flex h-9 bg-slate-100 dark:bg-slate-950 border-b border-slate-200 dark:border-white/[0.02] transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 w-full h-full flex items-center justify-between">
           <div className="text-xs font-normal text-slate-600 dark:text-zinc-400 flex items-center space-x-6">
             <a href="mailto:office@servicecomputer.ro" className="flex items-center space-x-2 hover:text-blue-600 dark:hover:text-white transition-colors duration-200">
@@ -56,7 +56,7 @@ export default function Navbar() {
 
       {/* Main Header Sticky Glassmorphism */}
       <header className={`sticky top-0 z-50 w-full transition-all duration-300 ease-out border-b border-slate-200 dark:border-white/[0.05] ${
-        isScrolled ? "bg-white/80 dark:bg-[#030712]/80 backdrop-blur-md shadow-sm dark:shadow-[0_2px_20px_-5px_rgba(0,0,0,0.3)]" : "bg-white/70 dark:bg-[#030712]/70 backdrop-blur-md"
+        isScrolled ? "bg-white/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm dark:shadow-[0_2px_20px_-5px_rgba(0,0,0,0.3)]" : "bg-white/70 dark:bg-slate-950/70 backdrop-blur-md"
       }`}>
         <div className="max-w-7xl mx-auto px-6 w-full h-14 md:h-16 flex items-center justify-between">
           
@@ -110,7 +110,7 @@ export default function Navbar() {
                 <Menu className="w-5 h-5" />
                 <span className="sr-only">Deschide meniul</span>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[85vw] sm:w-[350px] backdrop-blur-xl bg-white/95 dark:bg-[#030712]/95 border-slate-200 dark:border-white/[0.08] p-6 flex flex-col">
+              <SheetContent side="right" className="w-[85vw] sm:w-[350px] backdrop-blur-xl bg-white/95 dark:bg-slate-950/95 border-slate-200 dark:border-white/[0.08] p-6 flex flex-col">
                 <SheetTitle className="text-left font-bold tracking-tight text-slate-900 dark:text-white text-lg mb-8">
                   COMPUTER SHOP AND SERVICE
                 </SheetTitle>
