@@ -20,52 +20,37 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         {/* Left Column: Information */}
         <div className="lg:col-span-7 flex flex-col text-center lg:text-left">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex self-center lg:self-start items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-600 dark:text-blue-400 text-xs font-bold tracking-wide uppercase mb-6"
+          <div
+            className="animate-in fade-in slide-in-from-bottom-4 duration-700 inline-flex self-center lg:self-start items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-600 dark:text-blue-400 text-xs font-bold tracking-wide uppercase mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-blue-400 animate-ping" />
             Service Autorizat &amp; Rapid în București
-          </motion.div>
+          </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-6"
+          <h1
+            className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100 fill-mode-both text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-6"
           >
             SERVICE LAPTOP SI{" "}
             <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-pink-600 dark:from-blue-400 dark:via-indigo-400 dark:to-pink-500 bg-clip-text text-transparent">
               CALCULATOARE PC
             </span>
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-xl text-slate-800 dark:text-slate-200 font-medium mb-4 text-balance mx-auto lg:mx-0"
+          <p
+            className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200 fill-mode-both text-base sm:text-xl text-slate-800 dark:text-slate-200 font-medium mb-4 text-balance mx-auto lg:mx-0"
           >
             Vă așteptăm la magazinele noastre din sectoarele 2&nbsp;și&nbsp;4.
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.25 }}
-            className="text-slate-600 dark:text-slate-300 max-w-2xl text-sm sm:text-base mb-10 leading-relaxed"
+          </p>
+          <p
+            className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[250ms] fill-mode-both text-slate-600 dark:text-slate-300 max-w-2xl text-sm sm:text-base mb-10 leading-relaxed"
           >
             Echipă de profesioniști dedicată reparațiilor hardware și software rapide. 
             Oferim servicii calitative, diagnoză corectă și logistică gratuită 
             prin serviciul specializat de <strong className="text-slate-700 dark:text-white">Pick-Up &amp; Return</strong>.
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+          <div
+            className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 fill-mode-both flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
           >
             <Link
               href="/contact"
@@ -80,7 +65,7 @@ export default function Hero() {
             >
               Instalare Windows la Domiciliu
             </Link>
-          </motion.div>
+          </div>
         </div>
 
         {/* Right Column: MacBook Pro Mockup */}
