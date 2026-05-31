@@ -18,8 +18,18 @@ const getMobileIcon = (label: string) => {
 };
 
 const getBadge = (label: string) => {
-  if (label === "Windows") return <span className="ml-auto bg-gradient-to-r from-pink-500 to-purple-500 text-white text-[9px] font-black tracking-wider uppercase px-2 py-1 rounded-lg shadow-md shadow-pink-500/20">Top Choice</span>;
-  if (label === "Laptopuri") return <span className="ml-auto bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 text-[9px] font-bold tracking-wider uppercase px-2 py-1 rounded-lg">Popular</span>;
+  if (label === "Windows") return (
+    <div className="ml-auto flex items-center gap-2">
+      <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-white text-[9px] font-black tracking-wider uppercase px-2 py-1 rounded-lg shadow-md shadow-pink-500/20">Top Choice</span>
+      <ArrowRight className="w-4 h-4 text-slate-300 dark:text-slate-700 group-hover:translate-x-1 transition-transform" />
+    </div>
+  );
+  if (label === "Laptopuri") return (
+    <div className="ml-auto flex items-center gap-2">
+      <span className="bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 text-[9px] font-bold tracking-wider uppercase px-2 py-1 rounded-lg">Popular</span>
+      <ArrowRight className="w-4 h-4 text-slate-300 dark:text-slate-700 group-hover:translate-x-1 transition-transform" />
+    </div>
+  );
   return <ArrowRight className="ml-auto w-4 h-4 text-slate-300 dark:text-slate-700 group-hover:translate-x-1 transition-transform" />;
 };
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -94,9 +104,8 @@ export default function Navbar() {
                 <path d="M50 20 C60 20, 70 30, 70 50 C70 70, 50 80, 40 70 C30 60, 30 40, 50 30" stroke="url(#swirlGradNew)" strokeWidth="6" strokeLinecap="round" fill="none" />
               </svg>
             </div>
-            <span className="font-bold tracking-tight text-slate-900 dark:text-white text-[12px] sm:text-sm md:text-base leading-tight flex flex-col sm:block">
-              <span>COMPUTER SHOP</span>
-              <span className="text-[10px] sm:text-[11px] md:text-xs text-blue-600 dark:text-blue-400 uppercase tracking-wider">AND SERVICE</span>
+            <span className="font-bold tracking-tight text-slate-900 dark:text-white text-sm md:text-base leading-none">
+              COMPUTER SHOP AND SERVICE
             </span>
           </Link>
 
@@ -133,9 +142,9 @@ export default function Navbar() {
               <SheetContent side="right" className="w-[85vw] sm:w-[350px] backdrop-blur-xl bg-white/95 dark:bg-slate-950/95 border-slate-200 dark:border-white/[0.08] p-6 flex flex-col">
                 <SheetTitle>
                   <Link href="/" className="flex items-center space-x-3 group relative mb-8">
-                    <div className="bg-blue-500/10 dark:bg-violet-500/10 blur-xl absolute -z-10 w-12 h-12 rounded-full left-0 top-1/2 -translate-y-1/2" />
-                    <div className="relative w-8 h-8 flex items-center justify-center">
-                      <svg className="w-8 h-8 animate-[spin_10s_linear_infinite]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div className="bg-blue-500/10 dark:bg-violet-500/10 blur-xl absolute -z-10 w-14 h-14 rounded-full left-0 top-1/2 -translate-y-1/2" />
+                    <div className="relative w-10 h-10 flex items-center justify-center">
+                      <svg className="w-10 h-10 animate-[spin_10s_linear_infinite]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                           <linearGradient id="swirlGradMobile" x1="0%" y1="0%" x2="100%" y2="100%">
                             <stop offset="0%" stopColor="#8b5cf6" />
@@ -146,9 +155,8 @@ export default function Navbar() {
                         <path d="M50 20 C60 20, 70 30, 70 50 C70 70, 50 80, 40 70 C30 60, 30 40, 50 30" stroke="url(#swirlGradMobile)" strokeWidth="6" strokeLinecap="round" fill="none" />
                       </svg>
                     </div>
-                    <span className="font-bold tracking-tight text-slate-900 dark:text-white text-[12px] sm:text-sm md:text-base leading-tight flex flex-col sm:block text-left">
-                      <span>COMPUTER SHOP</span>
-                      <span className="text-[10px] sm:text-[11px] md:text-xs text-blue-600 dark:text-blue-400 uppercase tracking-wider block">AND SERVICE</span>
+                    <span className="font-bold tracking-tight text-slate-900 dark:text-white text-[15px] sm:text-base md:text-lg leading-tight">
+                      COMPUTER SHOP AND SERVICE
                     </span>
                   </Link>
                 </SheetTitle>
@@ -170,29 +178,6 @@ export default function Navbar() {
                       </Link>
                     ))}
                   </div>
-                  
-                  <div className="mt-auto flex flex-col space-y-4 mb-6 text-sm text-muted-foreground">
-                    <a href="mailto:office@servicecomputer.ro" className="flex items-center space-x-3">
-                      <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">
-                        <Mail className="w-4 h-4 text-violet-500" />
-                      </div>
-                      <span>office@servicecomputer.ro</span>
-                    </a>
-                    <a href="tel:0770198233" className="flex items-center space-x-3">
-                      <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">
-                        <Phone className="w-4 h-4 text-violet-500" />
-                      </div>
-                      <span className="font-medium text-foreground">+40 770 198 233</span>
-                    </a>
-                  </div>
-
-                  <Link
-                    href="/contact"
-                    className="w-full h-12 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-medium shadow-md flex items-center justify-center space-x-2 hover:from-violet-500 hover:to-indigo-500 transition-all"
-                  >
-                    <span>Pick-up & Return Gratuit</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
                 </nav>
               </SheetContent>
             </Sheet>
