@@ -90,9 +90,9 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 w-full h-14 md:h-16 flex items-center justify-between">
           
           {/* Stânga: Brand ID & Glow */}
-          <Link href="/" className="flex items-center space-x-3 group relative">
+          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group relative shrink min-w-0">
             <div className="bg-blue-500/10 dark:bg-violet-500/10 blur-xl absolute -z-10 w-12 h-12 rounded-full left-0 top-1/2 -translate-y-1/2" />
-            <div className="relative w-8 h-8 flex items-center justify-center">
+            <div className="relative w-8 h-8 shrink-0 flex items-center justify-center">
               <svg className="w-8 h-8 animate-[spin_10s_linear_infinite]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="swirlGradNew" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -104,7 +104,7 @@ export default function Navbar() {
                 <path d="M50 20 C60 20, 70 30, 70 50 C70 70, 50 80, 40 70 C30 60, 30 40, 50 30" stroke="url(#swirlGradNew)" strokeWidth="6" strokeLinecap="round" fill="none" />
               </svg>
             </div>
-            <span className="font-bold tracking-tight text-slate-900 dark:text-white text-sm md:text-base leading-none hidden sm:block">
+            <span className="font-bold tracking-tight text-slate-900 dark:text-white text-[11px] sm:text-sm md:text-base leading-none truncate">
               COMPUTER SHOP AND SERVICE
             </span>
           </Link>
