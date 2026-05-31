@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-50 dark:bg-slate-950 text-slate-600 dark:text-slate-400 pt-16 pb-24 md:pb-8 border-t border-slate-200 dark:border-slate-900 transition-colors duration-300">
+    <footer className="bg-slate-50 dark:bg-slate-950 text-slate-700 dark:text-zinc-300 pt-16 pb-24 md:pb-8 border-t border-slate-200 dark:border-slate-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           
@@ -147,9 +147,9 @@ export default function Footer() {
               </li>
               <li>
                 <p className="font-bold text-slate-800 dark:text-slate-200">Sâmbătă – Duminică</p>
-                <p className="text-xs text-rose-600 dark:text-rose-400 mt-0.5 italic">Închis</p>
+                <p className="text-xs text-rose-700 dark:text-rose-300 mt-0.5 italic">Închis</p>
               </li>
-              <li className="pt-2 border-t border-slate-200 dark:border-slate-900 flex items-center gap-2 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+              <li className="pt-2 border-t border-slate-200 dark:border-slate-900 flex items-center gap-2 text-xs font-semibold text-emerald-700 dark:text-emerald-300">
                 <ShieldCheck className="w-4 h-4 shrink-0" />
                 Fără costuri ascunse
               </li>

@@ -24,7 +24,7 @@ export default function StickyMobileCTA() {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex-1 inline-flex items-center justify-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold h-11 rounded-xl text-[10px] sm:text-xs transition-colors shadow-sm"
+        className="flex-1 inline-flex items-center justify-center gap-1.5 bg-emerald-700 hover:bg-emerald-800 text-white font-bold h-11 rounded-xl text-[10px] sm:text-xs transition-colors shadow-sm"
       >
         <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
         <span>WhatsApp</span>
