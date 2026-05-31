@@ -142,7 +142,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full bg-[#030712] text-slate-100 dark:bg-[#030712] dark:text-slate-100 flex flex-col font-sans transition-colors duration-300">
+      <body className="min-h-full bg-white text-slate-900 dark:bg-[#030712] dark:text-slate-100 flex flex-col font-sans transition-colors duration-300">
         <PostHogProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Navbar />

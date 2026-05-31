@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-950 text-slate-400 pt-16 pb-24 md:pb-8 border-t border-slate-900 transition-colors">
+    <footer className="bg-slate-50 dark:bg-slate-950 text-slate-600 dark:text-slate-400 pt-16 pb-24 md:pb-8 border-t border-slate-200 dark:border-slate-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           
@@ -43,7 +43,7 @@ export default function Footer() {
                 </defs>
               </svg>
               <div className="flex flex-col">
-                <span className="font-extrabold text-sm sm:text-base tracking-tight leading-none text-white">
+                <span className="font-extrabold text-sm sm:text-base tracking-tight leading-none text-slate-900 dark:text-white transition-colors">
                   COMPUTER SHOP
                 </span>
                 <span className="text-[9px] font-bold tracking-widest text-slate-500 uppercase leading-none mt-0.5">
@@ -51,7 +51,7 @@ export default function Footer() {
                 </span>
               </div>
             </Link>
-            <p className="text-xs sm:text-sm leading-relaxed text-slate-400">
+            <p className="text-xs sm:text-sm leading-relaxed text-slate-600 dark:text-slate-400 transition-colors">
               Oferim reparații și servicii IT la cel mai înalt nivel profesional, folosind dotări moderne și piese de înaltă calitate. Siguranța și performanța echipamentului tău sunt prioritatea noastră.
             </p>
             <div className="flex items-center gap-3">
@@ -59,7 +59,7 @@ export default function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-slate-900 hover:bg-slate-800 rounded-lg text-slate-300 hover:text-blue-500 transition-colors hover:scale-110"
+                className="p-2 bg-slate-200 dark:bg-slate-900 hover:bg-slate-300 dark:hover:bg-slate-800 rounded-lg text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-500 transition-colors hover:scale-110"
                 aria-label="Facebook Link"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -70,7 +70,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-slate-900 hover:bg-slate-800 rounded-lg text-slate-300 hover:text-pink-500 transition-colors hover:scale-110"
+                className="p-2 bg-slate-200 dark:bg-slate-900 hover:bg-slate-300 dark:hover:bg-slate-800 rounded-lg text-slate-700 dark:text-slate-300 hover:text-pink-600 dark:hover:text-pink-500 transition-colors hover:scale-110"
                 aria-label="Instagram Link"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -82,53 +82,53 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-extrabold text-white text-base mb-4 uppercase tracking-wider text-xs">
+            <h4 className="font-extrabold text-slate-900 dark:text-white text-base mb-4 uppercase tracking-wider text-xs transition-colors">
               Link-uri Rapide
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               <li>
-                <Link href="/reparatii-laptop" className="hover:text-white transition-colors">Reparații Laptop</Link>
+                <Link href="/reparatii-laptop" className="hover:text-blue-600 dark:hover:text-white transition-colors">Reparații Laptop</Link>
               </li>
               <li>
-                <Link href="/reparatii-calculatoare" className="hover:text-white transition-colors">Reparații Calculatoare</Link>
+                <Link href="/reparatii-calculatoare" className="hover:text-blue-600 dark:hover:text-white transition-colors">Reparații Calculatoare</Link>
               </li>
               <li>
-                <Link href="/reparatii-laptop" className="hover:text-white transition-colors">Servicii Software &amp; IT</Link>
+                <Link href="/reparatii-laptop" className="hover:text-blue-600 dark:hover:text-white transition-colors">Servicii Software &amp; IT</Link>
               </li>
               <li>
-                <Link href="/instalare-windows" className="hover:text-white transition-colors">Instalare Windows</Link>
+                <Link href="/instalare-windows" className="hover:text-blue-600 dark:hover:text-white transition-colors">Instalare Windows</Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white transition-colors">Pick-Up &amp; Return</Link>
+                <Link href="/contact" className="hover:text-blue-600 dark:hover:text-white transition-colors">Pick-Up &amp; Return</Link>
               </li>
               <li>
-                <Link href="/galerie" className="hover:text-white transition-colors">Galerie Foto</Link>
+                <Link href="/galerie" className="hover:text-blue-600 dark:hover:text-white transition-colors">Galerie Foto</Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-white transition-colors">Articole Blog</Link>
+                <Link href="/blog" className="hover:text-blue-600 dark:hover:text-white transition-colors">Articole Blog</Link>
               </li>
             </ul>
           </div>
 
           {/* Locations Short */}
           <div>
-            <h4 className="font-extrabold text-white text-base mb-4 uppercase tracking-wider text-xs">
+            <h4 className="font-extrabold text-slate-900 dark:text-white text-base mb-4 uppercase tracking-wider text-xs transition-colors">
               Locațiile Noastre
             </h4>
             <div className="space-y-4 text-xs sm:text-sm">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4.5 h-4.5 text-blue-500 shrink-0 mt-0.5" />
+                <MapPin className="w-4.5 h-4.5 text-blue-600 dark:text-blue-500 shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-bold text-slate-200">Sector 2</p>
-                  <p className="text-xs text-slate-400 mt-0.5">Bulevardul Chișinău nr. 12</p>
+                  <p className="font-bold text-slate-800 dark:text-slate-200">Sector 2</p>
+                  <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Bulevardul Chișinău nr. 12</p>
                   <p className="text-[10px] text-slate-500 mt-0.5">Tel: +40 770 198 233</p>
                 </div>
               </div>
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4.5 h-4.5 text-blue-500 shrink-0 mt-0.5" />
+                <MapPin className="w-4.5 h-4.5 text-blue-600 dark:text-blue-500 shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-bold text-slate-200">Sector 4</p>
-                  <p className="text-xs text-slate-400 mt-0.5">Bd. C-tin Brâncoveanu nr. 15, Bl. B17, parter</p>
+                  <p className="font-bold text-slate-800 dark:text-slate-200">Sector 4</p>
+                  <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Bd. C-tin Brâncoveanu nr. 15, Bl. B17, parter</p>
                   <p className="text-[10px] text-slate-500 mt-0.5">Tel: +40 770 198 233</p>
                 </div>
               </div>
@@ -137,19 +137,19 @@ export default function Footer() {
 
           {/* Schedule Summary */}
           <div>
-            <h4 className="font-extrabold text-white text-base mb-4 uppercase tracking-wider text-xs">
+            <h4 className="font-extrabold text-slate-900 dark:text-white text-base mb-4 uppercase tracking-wider text-xs transition-colors">
               Program Servicii
             </h4>
             <ul className="space-y-3 text-xs sm:text-sm">
               <li>
-                <p className="font-bold text-slate-200">Luni – Vineri</p>
-                <p className="text-xs text-slate-400 mt-0.5">09:00 – 17:30 (Ambele locații)</p>
+                <p className="font-bold text-slate-800 dark:text-slate-200">Luni – Vineri</p>
+                <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">09:00 – 17:30 (Ambele locații)</p>
               </li>
               <li>
-                <p className="font-bold text-slate-200">Sâmbătă – Duminică</p>
-                <p className="text-xs text-rose-400 mt-0.5 italic">Închis</p>
+                <p className="font-bold text-slate-800 dark:text-slate-200">Sâmbătă – Duminică</p>
+                <p className="text-xs text-rose-600 dark:text-rose-400 mt-0.5 italic">Închis</p>
               </li>
-              <li className="pt-2 border-t border-slate-900 flex items-center gap-2 text-xs font-semibold text-emerald-400">
+              <li className="pt-2 border-t border-slate-200 dark:border-slate-900 flex items-center gap-2 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
                 <ShieldCheck className="w-4 h-4 shrink-0" />
                 Fără costuri ascunse
               </li>
@@ -159,16 +159,16 @@ export default function Footer() {
         </div>
 
         {/* Footer bottom bar */}
-        <div className="pt-8 mt-8 border-t border-slate-900/80 text-center flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
-          <p>
+        <div className="pt-8 mt-8 border-t border-slate-200 dark:border-slate-900/80 text-center flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+          <p className="text-slate-500 dark:text-slate-500">
             Copyright &copy; {currentYear} COMPUTER SHOP &amp; SERVICE. Toate drepturile rezervate.
           </p>
           <div className="flex gap-4">
-            <Link href="#" className="hover:text-white transition-colors">Politică de Confidențialitate</Link>
-            <span>&bull;</span>
-            <Link href="#" className="hover:text-white transition-colors">Termeni și Condiții</Link>
-            <span>&bull;</span>
-            <Link href="#" className="hover:text-white transition-colors">ANPC</Link>
+            <Link href="#" className="hover:text-blue-600 dark:hover:text-white transition-colors">Politică de Confidențialitate</Link>
+            <span className="text-slate-300 dark:text-slate-700">&bull;</span>
+            <Link href="#" className="hover:text-blue-600 dark:hover:text-white transition-colors">Termeni și Condiții</Link>
+            <span className="text-slate-300 dark:text-slate-700">&bull;</span>
+            <Link href="#" className="hover:text-blue-600 dark:hover:text-white transition-colors">ANPC</Link>
           </div>
         </div>
 
