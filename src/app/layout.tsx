@@ -14,7 +14,11 @@ const PostHogProvider = dynamic(() => import("@/components/PostHogProvider").the
 const BackToTop = dynamic(() => import("@/components/BackToTop"));
 const WhatsAppWidget = dynamic(() => import("@/components/WhatsAppWidget"));
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+});
 
 const outfit = Outfit({
   subsets: ["latin"],
