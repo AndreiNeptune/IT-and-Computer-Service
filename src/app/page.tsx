@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Laptop, Monitor, MonitorUp } from "lucide-react";
 
-const Reviews = dynamic(() => import("@/components/Reviews"));
+import LazyReviewsWrapper from "@/components/LazyReviewsWrapper";
 
 export default function Home() {
   return (
@@ -88,7 +88,7 @@ export default function Home() {
       </section>
 
       {/* Customer Testimonials Carousel */}
-      <Reviews />
+      <LazyReviewsWrapper />
     </>
   );
 }

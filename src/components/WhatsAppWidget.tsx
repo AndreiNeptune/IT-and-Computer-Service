@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 
 export default function WhatsAppWidget() {
   const phoneNumber = "40770198233";
@@ -13,16 +12,11 @@ export default function WhatsAppWidget() {
       {/* Subtle pulsing background ring for premium feel */}
       <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
       
-      <motion.a
+      <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        transition={{ type: "spring", stiffness: 260, damping: 20 }}
-        className="relative flex items-center justify-center w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl shadow-emerald-500/30 hover:shadow-emerald-500/40 transition-all cursor-pointer group"
+        className="relative flex items-center justify-center w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl shadow-emerald-500/30 hover:shadow-emerald-500/40 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer group"
         aria-label="Contactează-ne pe WhatsApp"
       >
         {/* WhatsApp Icon */}
@@ -39,7 +33,7 @@ export default function WhatsAppWidget() {
         <span className="absolute right-16 scale-0 group-hover:scale-100 transition-all duration-200 origin-right bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-bold text-xs px-3 py-2 rounded-xl whitespace-nowrap shadow-lg select-none">
           Contact pe WhatsApp
         </span>
-      </motion.a>
+      </a>
     </div>
   );
 }
