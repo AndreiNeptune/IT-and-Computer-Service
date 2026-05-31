@@ -6,13 +6,16 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white dark:bg-slate-950 text-slate-900 dark:text-white py-20 lg:py-28 px-4 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-slate-900 transition-colors duration-300">
+    <section className="relative overflow-hidden bg-white dark:bg-slate-950 text-slate-900 dark:text-white py-20 lg:py-28 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
       {/* Background cyber grid & colorful blobs */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-70 transition-colors duration-300" />
       
       {/* Glowing light blobs */}
       <div className="absolute top-10 left-1/4 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl" />
       <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-purple-600/25 rounded-full blur-3xl animate-[pulse_6s_ease-in-out_infinite]" />
+
+      {/* Fade out to the next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-t from-white dark:from-slate-950 to-transparent z-0 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         {/* Left Column: Information */}
@@ -21,7 +24,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex self-center lg:self-start items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-bold tracking-wide uppercase mb-6"
+            className="inline-flex self-center lg:self-start items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-600 dark:text-blue-400 text-xs font-bold tracking-wide uppercase mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-blue-400 animate-ping" />
             Service Autorizat &amp; Rapid în București
@@ -34,7 +37,7 @@ export default function Hero() {
             className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-6"
           >
             SERVICE LAPTOP SI{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-pink-600 dark:from-blue-400 dark:via-indigo-400 dark:to-pink-500 bg-clip-text text-transparent">
               CALCULATOARE PC
             </span>
           </motion.h1>
@@ -43,7 +46,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-xl text-slate-600 dark:text-slate-300 font-medium mb-4 text-balance mx-auto lg:mx-0"
+            className="text-base sm:text-xl text-slate-800 dark:text-slate-200 font-medium mb-4 text-balance mx-auto lg:mx-0"
           >
             Vă așteptăm la magazinele noastre din sectoarele 2&nbsp;și&nbsp;4.
           </motion.p>
@@ -51,7 +54,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25 }}
-            className="text-slate-500 dark:text-slate-400 max-w-2xl text-sm sm:text-base mb-10 leading-relaxed"
+            className="text-slate-600 dark:text-slate-300 max-w-2xl text-sm sm:text-base mb-10 leading-relaxed"
           >
             Echipă de profesioniști dedicată reparațiilor hardware și software rapide. 
             Oferim servicii calitative, diagnoză corectă și logistică gratuită 
