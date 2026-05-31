@@ -2,7 +2,26 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Mail, Phone, Menu, ArrowRight } from "lucide-react";
+import { Mail, Phone, Menu, ArrowRight, Home, Laptop, Monitor, MonitorUp, ImageIcon, FileText } from "lucide-react";
+
+const getMobileIcon = (label: string) => {
+  switch(label) {
+    case "Acasă": return <Home className="w-5 h-5 text-slate-500 dark:text-slate-400" />;
+    case "Laptopuri": return <Laptop className="w-5 h-5 text-blue-500 dark:text-blue-400" />;
+    case "Calculatoare": return <Monitor className="w-5 h-5 text-indigo-500 dark:text-indigo-400" />;
+    case "Windows": return <MonitorUp className="w-5 h-5 text-pink-500 dark:text-pink-400" />;
+    case "Galerie": return <ImageIcon className="w-5 h-5 text-slate-500 dark:text-slate-400" />;
+    case "Blog": return <FileText className="w-5 h-5 text-slate-500 dark:text-slate-400" />;
+    case "Contact": return <Phone className="w-5 h-5 text-slate-500 dark:text-slate-400" />;
+    default: return <ArrowRight className="w-5 h-5 text-slate-400" />;
+  }
+};
+
+const getBadge = (label: string) => {
+  if (label === "Windows") return <span className="ml-auto bg-gradient-to-r from-pink-500 to-purple-500 text-white text-[9px] font-black tracking-wider uppercase px-2 py-1 rounded-lg shadow-md shadow-pink-500/20">Top Choice</span>;
+  if (label === "Laptopuri") return <span className="ml-auto bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 text-[9px] font-bold tracking-wider uppercase px-2 py-1 rounded-lg">Popular</span>;
+  return <ArrowRight className="ml-auto w-4 h-4 text-slate-300 dark:text-slate-700 group-hover:translate-x-1 transition-transform" />;
+};
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import ThemeToggle from "./ThemeToggle";
@@ -56,7 +75,7 @@ export default function Navbar() {
 
       {/* Main Header Sticky Glassmorphism */}
       <header className={`sticky top-0 z-50 w-full transition-all duration-300 ease-out border-b border-slate-200 dark:border-white/[0.05] ${
-        isScrolled ? "bg-white/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm dark:shadow-[0_2px_20px_-5px_rgba(0,0,0,0.3)]" : "bg-white/70 dark:bg-slate-950/70 backdrop-blur-md"
+        isScrolled ? "bg-white/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm dark:shadow-[0_2px_20px_-5px_rgba(0,0,0,0.3)]" : "bg-white dark:bg-slate-950"
       }`}>
         <div className="max-w-7xl mx-auto px-6 w-full h-14 md:h-16 flex items-center justify-between">
           
@@ -75,8 +94,9 @@ export default function Navbar() {
                 <path d="M50 20 C60 20, 70 30, 70 50 C70 70, 50 80, 40 70 C30 60, 30 40, 50 30" stroke="url(#swirlGradNew)" strokeWidth="6" strokeLinecap="round" fill="none" />
               </svg>
             </div>
-            <span className="font-bold tracking-tight text-slate-900 dark:text-white text-sm md:text-base leading-none">
-              COMPUTER SHOP AND SERVICE
+            <span className="font-bold tracking-tight text-slate-900 dark:text-white text-[12px] sm:text-sm md:text-base leading-tight flex flex-col sm:block">
+              <span>COMPUTER SHOP</span>
+              <span className="text-[10px] sm:text-[11px] md:text-xs text-blue-600 dark:text-blue-400 uppercase tracking-wider">AND SERVICE</span>
             </span>
           </Link>
 
@@ -111,18 +131,42 @@ export default function Navbar() {
                 <span className="sr-only">Deschide meniul</span>
               </SheetTrigger>
               <SheetContent side="right" className="w-[85vw] sm:w-[350px] backdrop-blur-xl bg-white/95 dark:bg-slate-950/95 border-slate-200 dark:border-white/[0.08] p-6 flex flex-col">
-                <SheetTitle className="text-left font-bold tracking-tight text-slate-900 dark:text-white text-lg mb-8">
-                  COMPUTER SHOP AND SERVICE
+                <SheetTitle>
+                  <Link href="/" className="flex items-center space-x-3 group relative mb-8">
+                    <div className="bg-blue-500/10 dark:bg-violet-500/10 blur-xl absolute -z-10 w-12 h-12 rounded-full left-0 top-1/2 -translate-y-1/2" />
+                    <div className="relative w-8 h-8 flex items-center justify-center">
+                      <svg className="w-8 h-8 animate-[spin_10s_linear_infinite]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <linearGradient id="swirlGradMobile" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#8b5cf6" />
+                            <stop offset="100%" stopColor="#4f46e5" />
+                          </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="40" stroke="url(#swirlGradMobile)" strokeWidth="8" strokeLinecap="round" strokeDasharray="180 60" />
+                        <path d="M50 20 C60 20, 70 30, 70 50 C70 70, 50 80, 40 70 C30 60, 30 40, 50 30" stroke="url(#swirlGradMobile)" strokeWidth="6" strokeLinecap="round" fill="none" />
+                      </svg>
+                    </div>
+                    <span className="font-bold tracking-tight text-slate-900 dark:text-white text-[12px] sm:text-sm md:text-base leading-tight flex flex-col sm:block text-left">
+                      <span>COMPUTER SHOP</span>
+                      <span className="text-[10px] sm:text-[11px] md:text-xs text-blue-600 dark:text-blue-400 uppercase tracking-wider block">AND SERVICE</span>
+                    </span>
+                  </Link>
                 </SheetTitle>
-                <nav className="flex-1 flex flex-col">
-                  <div className="flex flex-col space-y-1 mb-8">
+                <nav className="flex-1 flex flex-col mt-4">
+                  <div className="flex flex-col space-y-2 mb-8">
                     {navLinks.map((link) => (
                       <Link
                         key={link.href}
                         href={link.href}
-                        className="text-xl font-medium py-3 text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-white block transition-colors border-b border-slate-200 dark:border-white/[0.05]"
+                        className="group flex items-center gap-4 py-3 px-2 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-all border border-transparent hover:border-slate-100 dark:hover:border-slate-800"
                       >
-                        {link.label}
+                        <div className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-900/80 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform">
+                          {getMobileIcon(link.label)}
+                        </div>
+                        <span className="text-[17px] font-bold text-slate-700 dark:text-slate-200 group-hover:text-blue-600 dark:group-hover:text-white transition-colors">
+                          {link.label}
+                        </span>
+                        {getBadge(link.label)}
                       </Link>
                     ))}
                   </div>

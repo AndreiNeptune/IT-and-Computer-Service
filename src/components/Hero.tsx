@@ -31,7 +31,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-6"
+            className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-6"
           >
             SERVICE LAPTOP SI{" "}
             <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-pink-500 bg-clip-text text-transparent">
@@ -43,9 +43,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 font-medium mb-4"
+            className="text-base sm:text-xl text-slate-600 dark:text-slate-300 font-medium mb-4 text-balance mx-auto lg:mx-0"
           >
-            Vă așteptăm la magazinele noastre din sectoarele 2 și 4.
+            Vă așteptăm la magazinele noastre din sectoarele 2&nbsp;și&nbsp;4.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -66,14 +66,14 @@ export default function Hero() {
           >
             <Link
               href="/contact"
-              className="group inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-2xl shadow-xl shadow-blue-500/20 hover:shadow-2xl hover:shadow-blue-500/30 transition-all hover:-translate-y-0.5 text-base"
+              className="group inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-2xl shadow-xl shadow-blue-500/20 hover:shadow-2xl hover:shadow-blue-500/30 transition-all hover:-translate-y-0.5 text-sm sm:text-base"
             >
               Programează o Reparație
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               href="/instalare-windows"
-              className="inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 text-slate-900 dark:text-slate-100 font-bold py-4 px-8 rounded-2xl transition-all hover:-translate-y-0.5 text-base"
+              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 text-slate-900 dark:text-slate-100 font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-2xl transition-all hover:-translate-y-0.5 text-sm sm:text-base"
             >
               Instalare Windows la Domiciliu
             </Link>
@@ -81,7 +81,7 @@ export default function Hero() {
         </div>
 
         {/* Right Column: MacBook Pro Mockup */}
-        <div className="lg:col-span-5 flex justify-center items-center">
+        <div className="lg:col-span-5 hidden lg:flex justify-center items-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9, rotateX: 10 }}
             animate={{ opacity: 1, scale: 1, rotateX: 0 }}

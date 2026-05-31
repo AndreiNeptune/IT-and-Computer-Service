@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageCircle } from "lucide-react";
 
 export default function WhatsAppWidget() {
   const phoneNumber = "40770198233";
@@ -10,7 +9,7 @@ export default function WhatsAppWidget() {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
   return (
-    <div className="fixed z-40 bottom-20 right-4 md:bottom-6 md:right-6">
+    <div className="fixed z-40 bottom-6 right-6 hidden md:block">
       {/* Subtle pulsing background ring for premium feel */}
       <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
       
