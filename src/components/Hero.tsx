@@ -21,14 +21,16 @@ export default function Hero() {
         {/* Left Column: Information */}
         <div className="lg:col-span-7 flex flex-col text-center lg:text-left">
           <div
-            className="animate-in fade-in slide-in-from-bottom-4 duration-700 inline-flex self-center lg:self-start items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-600 dark:text-blue-400 text-xs font-bold tracking-wide uppercase mb-6"
+            className="animate-in fade-in slide-in-from-bottom-4 fill-mode-both inline-flex self-center lg:self-start items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-600 dark:text-blue-400 text-xs font-bold tracking-wide uppercase mb-6"
+            style={{ animationDuration: '700ms' }}
           >
             <span className="w-2 h-2 rounded-full bg-blue-400 animate-ping" />
             Service Autorizat &amp; Rapid în București
           </div>
 
           <h1
-            className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100 fill-mode-both text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-6"
+            className="animate-in fade-in slide-in-from-bottom-4 fill-mode-both text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-6"
+            style={{ animationDuration: '700ms', animationDelay: '100ms' }}
           >
             SERVICE LAPTOP SI{" "}
             <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-pink-600 dark:from-blue-400 dark:via-indigo-400 dark:to-pink-500 bg-clip-text text-transparent">
@@ -37,12 +39,14 @@ export default function Hero() {
           </h1>
 
           <p
-            className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200 fill-mode-both text-base sm:text-xl text-slate-800 dark:text-slate-200 font-medium mb-4 text-balance mx-auto lg:mx-0"
+            className="animate-in fade-in slide-in-from-bottom-4 fill-mode-both text-base sm:text-xl text-slate-800 dark:text-slate-200 font-medium mb-4 text-balance mx-auto lg:mx-0"
+            style={{ animationDuration: '700ms', animationDelay: '200ms' }}
           >
             Vă așteptăm la magazinele noastre din sectoarele 2&nbsp;și&nbsp;4.
           </p>
           <p
-            className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[250ms] fill-mode-both text-slate-600 dark:text-slate-300 max-w-2xl text-sm sm:text-base mb-10 leading-relaxed"
+            className="animate-in fade-in slide-in-from-bottom-4 fill-mode-both text-slate-600 dark:text-slate-300 max-w-2xl text-sm sm:text-base mb-10 leading-relaxed"
+            style={{ animationDuration: '700ms', animationDelay: '250ms' }}
           >
             Echipă de profesioniști dedicată reparațiilor hardware și software rapide. 
             Oferim servicii calitative, diagnoză corectă și logistică gratuită 
@@ -50,7 +54,8 @@ export default function Hero() {
           </p>
 
           <div
-            className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 fill-mode-both flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            className="animate-in fade-in slide-in-from-bottom-4 fill-mode-both flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            style={{ animationDuration: '700ms', animationDelay: '300ms' }}
           >
             <Link
               href="/contact"
