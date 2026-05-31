@@ -3,10 +3,22 @@
 import { ArrowRight, Laptop, Monitor } from "lucide-react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
 
 const HeroMockup = dynamic(() => import("./HeroMockup"), { ssr: false });
 
 export default function Hero() {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkWidth = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+    checkWidth();
+    window.addEventListener("resize", checkWidth);
+    return () => window.removeEventListener("resize", checkWidth);
+  }, []);
+
   return (
     <section className="relative overflow-hidden bg-white dark:bg-slate-950 text-slate-900 dark:text-white py-20 lg:py-28 px-4 sm:px-6 lg:px-8">
       {/* Background cyber grid & colorful blobs */}
@@ -72,7 +84,7 @@ export default function Hero() {
 
         {/* Right Column: MacBook Pro Mockup */}
         <div className="lg:col-span-5 hidden lg:flex justify-center items-center">
-          <HeroMockup />
+          {isDesktop && <HeroMockup />}
         </div>
       </div>
     </section>
