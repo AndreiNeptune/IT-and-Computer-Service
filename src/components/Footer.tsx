@@ -120,16 +120,16 @@ export default function Footer() {
                 <MapPin className="w-4.5 h-4.5 text-blue-600 dark:text-blue-500 shrink-0 mt-0.5" />
                 <div>
                   <p className="font-bold text-slate-800 dark:text-slate-200">Sector 2</p>
-                  <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Bulevardul Chișinău nr. 12</p>
-                  <p className="text-[10px] text-slate-500 mt-0.5">Tel: +40 770 198 233</p>
+                  <p className="text-xs text-slate-700 dark:text-zinc-300 mt-0.5">Bulevardul Chișinău nr. 12</p>
+                  <p className="text-[10px] text-slate-600 dark:text-zinc-400 mt-0.5">Tel: +40 770 198 233</p>
                 </div>
               </div>
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4.5 h-4.5 text-blue-600 dark:text-blue-500 shrink-0 mt-0.5" />
                 <div>
                   <p className="font-bold text-slate-800 dark:text-slate-200">Sector 4</p>
-                  <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Bd. C-tin Brâncoveanu nr. 15, Bl. B17, parter</p>
-                  <p className="text-[10px] text-slate-500 mt-0.5">Tel: +40 770 198 233</p>
+                  <p className="text-xs text-slate-700 dark:text-zinc-300 mt-0.5">Bd. C-tin Brâncoveanu nr. 15, Bl. B17, parter</p>
+                  <p className="text-[10px] text-slate-600 dark:text-zinc-400 mt-0.5">Tel: +40 770 198 233</p>
                 </div>
               </div>
             </div>
@@ -143,7 +143,7 @@ export default function Footer() {
             <ul className="space-y-3 text-xs sm:text-sm">
               <li>
                 <p className="font-bold text-slate-800 dark:text-slate-200">Luni – Vineri</p>
-                <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">09:00 – 17:30 (Ambele locații)</p>
+                <p className="text-xs text-slate-700 dark:text-zinc-300 mt-0.5">09:00 – 17:30 (Ambele locații)</p>
               </li>
               <li>
                 <p className="font-bold text-slate-800 dark:text-slate-200">Sâmbătă – Duminică</p>
@@ -160,7 +160,7 @@ export default function Footer() {
 
         {/* Footer bottom bar */}
         <div className="pt-8 mt-8 border-t border-slate-200 dark:border-slate-900/80 text-center flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
-          <p className="text-slate-500 dark:text-slate-500">
+          <p className="text-slate-600 dark:text-zinc-400">
             Copyright &copy; {currentYear}{" "}COMPUTER SHOP &amp; SERVICE. Toate drepturile rezervate.
           </p>
           <div className="flex gap-4">

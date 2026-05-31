@@ -55,7 +55,7 @@ export default function Reviews() {
           <h3 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
             Ce spun clienții noștri?
           </h3>
-          <p className="text-slate-500 dark:text-slate-400 text-sm max-w-xl mx-auto">
+          <p className="text-slate-600 dark:text-zinc-300 text-sm max-w-xl mx-auto">
             Părerile clienților care ne-au trecut pragul sau care au apelat la serviciile noastre la domiciliu în București și Ilfov.
           </p>
         </div>
@@ -99,13 +99,13 @@ export default function Reviews() {
                       {activeReview.author}
                     </h4>
                     {activeReview.device && (
-                      <p className="text-xs text-slate-400 dark:text-slate-500 font-medium">
+                      <p className="text-xs text-slate-600 dark:text-zinc-300 font-medium">
                         Serviciu: {activeReview.device}
                       </p>
                     )}
                   </div>
                   {activeReview.date && (
-                    <span className="text-xs text-slate-400 dark:text-slate-500 font-semibold bg-white dark:bg-slate-950 px-3 py-1 rounded-full border border-slate-100 dark:border-slate-900">
+                    <span className="text-xs text-slate-600 dark:text-zinc-300 font-semibold bg-white dark:bg-slate-950 px-3 py-1 rounded-full border border-slate-100 dark:border-slate-900">
                       {activeReview.date}
                     </span>
                   )}
@@ -125,7 +125,7 @@ export default function Reviews() {
                     setDirection(idx > activeIndex ? 1 : -1);
                     setActiveIndex(idx);
                   }}
-                  className={`w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${
+                  className={`relative before:content-[''] before:absolute before:-top-3 before:-bottom-3 before:-left-3 before:-right-3 w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${
                     idx === activeIndex
                       ? "bg-blue-600 dark:bg-blue-400 w-6"
                       : "bg-slate-300 dark:bg-slate-700"
