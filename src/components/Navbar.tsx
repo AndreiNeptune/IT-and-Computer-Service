@@ -31,7 +31,7 @@ export default function Navbar() {
   return (
     <>
       {/* Top Bar Discret (Desktop) */}
-      <div className="hidden md:flex h-9 bg-muted/20 border-b border-white/[0.03]">
+      <div className="hidden md:flex h-9 bg-transparent border-b border-white/[0.02]">
         <div className="max-w-7xl mx-auto px-6 w-full h-full flex items-center justify-between">
           <div className="text-xs font-normal text-muted-foreground/70 flex items-center space-x-6">
             <a href="mailto:office@servicecomputer.ro" className="flex items-center space-x-2 hover:text-foreground transition-colors">
@@ -55,8 +55,8 @@ export default function Navbar() {
       </div>
 
       {/* Main Header Sticky Glassmorphism */}
-      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ease-out border-b border-white/[0.04] ${
-        isScrolled ? "bg-background/80 backdrop-blur-md shadow-[0_2px_20px_-5px_rgba(0,0,0,0.3)]" : "bg-background/60 backdrop-blur-md"
+      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ease-out border-b border-white/[0.05] ${
+        isScrolled ? "bg-[#030712]/80 backdrop-blur-md shadow-[0_2px_20px_-5px_rgba(0,0,0,0.3)]" : "bg-[#030712]/70 backdrop-blur-md"
       }`}>
         <div className="max-w-7xl mx-auto px-6 w-full h-14 md:h-16 flex items-center justify-between">
           
@@ -75,7 +75,7 @@ export default function Navbar() {
                 <path d="M50 20 C60 20, 70 30, 70 50 C70 70, 50 80, 40 70 C30 60, 30 40, 50 30" stroke="url(#swirlGradNew)" strokeWidth="6" strokeLinecap="round" fill="none" />
               </svg>
             </div>
-            <span className="font-bold tracking-tight text-sm md:text-base leading-none">
+            <span className="font-bold tracking-tight text-white text-sm md:text-base leading-none">
               COMPUTER SHOP AND SERVICE
             </span>
           </Link>
@@ -86,7 +86,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground px-3 py-1.5 rounded-full hover:bg-white/[0.03] transition-all duration-300 ease-out"
+                className="text-sm font-medium text-zinc-400 hover:text-white px-3 py-1.5 rounded-full hover:bg-white/[0.03] transition-colors duration-200"
               >
                 {link.label}
               </Link>
@@ -95,8 +95,8 @@ export default function Navbar() {
 
           {/* Dreapta: CTA Cristal & Theme Toggle */}
           <div className="hidden md:flex items-center space-x-4">
-            <ThemeToggle />
-            <Link href="/contact" className={buttonVariants({ variant: "default", className: "group rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_1px_4px_rgba(0,0,0,0.4)] h-10 px-5 text-sm font-medium transition-all duration-300" })}>
+            <ThemeToggle className="p-2.5 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white hover:bg-white/[0.08] transition-all focus:outline-none" />
+            <Link href="/contact" className={buttonVariants({ variant: "default", className: "group rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-medium shadow-lg shadow-indigo-500/10 h-10 px-5 text-sm transition-all duration-300" })}>
               Pick-up & Return Gratuit
               <ArrowRight className="w-4 h-4 ml-1.5 group-hover:translate-x-1 transition-transform duration-200" />
             </Link>
@@ -104,14 +104,14 @@ export default function Navbar() {
 
           {/* Interfață Mobilă: Sheet */}
           <div className="flex md:hidden items-center space-x-2">
-            <ThemeToggle />
+            <ThemeToggle className="p-2.5 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white hover:bg-white/[0.08] transition-all focus:outline-none" />
             <Sheet>
-              <SheetTrigger render={<Button variant="ghost" size="icon" className="rounded-lg" />}>
+              <SheetTrigger render={<Button variant="ghost" size="icon" className="rounded-lg text-white hover:bg-white/[0.08] hover:text-white" />}>
                 <Menu className="w-5 h-5" />
                 <span className="sr-only">Deschide meniul</span>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[85vw] sm:w-[350px] backdrop-blur-xl bg-background/95 border-border/10 p-6 flex flex-col">
-                <SheetTitle className="text-left font-bold tracking-tight text-lg mb-8">
+              <SheetContent side="right" className="w-[85vw] sm:w-[350px] backdrop-blur-xl bg-[#030712]/95 border-white/[0.08] p-6 flex flex-col">
+                <SheetTitle className="text-left font-bold tracking-tight text-white text-lg mb-8">
                   COMPUTER SHOP AND SERVICE
                 </SheetTitle>
                 <nav className="flex-1 flex flex-col">
@@ -120,7 +120,7 @@ export default function Navbar() {
                       <Link
                         key={link.href}
                         href={link.href}
-                        className="text-xl font-medium py-3 text-foreground/90 hover:text-foreground block transition-colors border-b border-border/20"
+                        className="text-xl font-medium py-3 text-zinc-400 hover:text-white block transition-colors border-b border-white/[0.05]"
                       >
                         {link.label}
                       </Link>
