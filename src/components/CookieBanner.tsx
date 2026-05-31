@@ -22,18 +22,18 @@ export default function CookieBanner() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-20 left-6 right-6 md:bottom-6 md:left-auto md:max-w-md z-50 animate-[slideUp_0.5s_ease-out]">
-      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-2xl backdrop-blur-md flex flex-col gap-4">
-        <div className="flex items-start gap-3">
-          <div className="bg-blue-500/10 p-2 rounded-xl text-blue-600 dark:text-blue-400 shrink-0">
-            <Info className="w-5 h-5" />
+    <div className="fixed bottom-20 left-4 right-4 md:bottom-6 md:left-auto md:max-w-sm z-50 animate-[slideUp_0.5s_ease-out]">
+      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-3 shadow-2xl backdrop-blur-md flex flex-col gap-3">
+        <div className="flex items-start gap-2">
+          <div className="bg-blue-500/10 p-1.5 rounded-lg text-blue-600 dark:text-blue-400 shrink-0">
+            <Info className="w-4 h-4" />
           </div>
-          <div className="space-y-1">
-            <h4 className="font-bold text-sm text-slate-900 dark:text-white">
+          <div className="space-y-0.5">
+            <h4 className="font-bold text-sm text-slate-900 dark:text-white leading-tight">
               Politica de Cookie-uri
             </h4>
-            <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Acest site folosește cookie-uri pentru a îmbunătăți experiența utilizatorilor. Continuarea navigării pe site implică acceptarea politicii de utilizare a cookie-urilor.
+            <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-tight">
+              Folosim cookie-uri pentru o experiență mai bună. Continuând navigarea, ești de acord cu politica noastră.
             </p>
           </div>
         </div>

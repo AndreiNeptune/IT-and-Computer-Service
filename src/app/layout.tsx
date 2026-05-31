@@ -9,8 +9,8 @@ import { cn } from "@/lib/utils";
 
 import CookieBanner from "@/components/CookieBanner";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
+import { PostHogProvider } from "@/components/PostHogProvider";
 
-const PostHogProvider = dynamic(() => import("@/components/PostHogProvider").then(mod => mod.PostHogProvider));
 const BackToTop = dynamic(() => import("@/components/BackToTop"));
 const WhatsAppWidget = dynamic(() => import("@/components/WhatsAppWidget"));
 
