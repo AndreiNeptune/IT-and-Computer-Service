@@ -53,9 +53,9 @@ export default function HeroMockup() {
             </svg>
           </div>
           
-          <h3 className="relative z-10 text-xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-indigo-300 to-pink-400 bg-clip-text text-transparent leading-none">
+          <div className="relative z-10 text-xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-indigo-300 to-pink-400 bg-clip-text text-transparent leading-none">
             COMPUTER SHOP
-          </h3>
+          </div>
           <p className="relative z-10 text-[9px] font-black tracking-widest text-slate-400 uppercase mt-1">
             and SERVICE
           </p>
