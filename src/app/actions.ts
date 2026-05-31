@@ -48,7 +48,7 @@ export type AppointmentState = {
 };
 
 export async function submitAppointment(
-  prevState: any,
+  prevState: AppointmentState | null,
   formData: FormData
 ): Promise<AppointmentState> {
   return Sentry.withServerActionInstrumentation(

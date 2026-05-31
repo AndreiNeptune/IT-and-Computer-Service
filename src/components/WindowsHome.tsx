@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, ShieldAlert, Cpu, HardDrive, Smartphone, ShieldCheck, Zap, HelpCircle } from "lucide-react";
+import { Check, ShieldCheck, Zap } from "lucide-react";
 import Link from "next/link";
 
 export default function WindowsHome() {

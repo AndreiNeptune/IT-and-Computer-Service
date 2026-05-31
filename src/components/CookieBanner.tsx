@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Info, X } from "lucide-react";
+import { Info } from "lucide-react";
 import Link from "next/link";
 
 export default function CookieBanner() {

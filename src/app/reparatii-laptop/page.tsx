@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { servicesData } from "@/data/services";
-import { Search, Laptop } from "lucide-react";
+import { Laptop } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {

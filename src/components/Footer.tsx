@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, ShieldCheck } from "lucide-react";
+import { MapPin, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {

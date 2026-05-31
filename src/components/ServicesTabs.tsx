@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
-import { servicesData, badgeGuides, ServiceItem } from "@/data/services";
+import { useState, useMemo } from "react";
+import { servicesData, badgeGuides } from "@/data/services";
 import { Search, Laptop, Monitor, HelpCircle, Sparkles, X } from "lucide-react";
 import Fuse from "fuse.js";
 import Link from "next/link";
@@ -17,14 +17,6 @@ export default function ServicesTabs() {
     { id: "calculator", label: "Reparații Calculatoare", icon: Monitor },
     { id: "servicii-it", label: "Servicii IT & Soluții", icon: HelpCircle },
   ];
-
-  // Initialize Fuse.js for fuzzy search
-  const fuse = useMemo(() => {
-    return new Fuse(servicesData, {
-      keys: ["name", "description"],
-      threshold: 0.35, // Allows a balance between precision and fuzzy match
-    });
-  }, []);
 
   // Filter services based on active tab and search query
   const filteredServices = useMemo(() => {
