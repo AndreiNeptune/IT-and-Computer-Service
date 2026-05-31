@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Mail, Phone, Menu, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import ThemeToggle from "./ThemeToggle";
 
@@ -96,10 +96,10 @@ export default function Navbar() {
           {/* Dreapta: CTA Cristal & Theme Toggle */}
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
-            <Button variant="default" className="group rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_1px_4px_rgba(0,0,0,0.4)] h-10 px-5 text-sm font-medium transition-all duration-300" render={<Link href="/contact" />}>
+            <Link href="/contact" className={buttonVariants({ variant: "default", className: "group rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_1px_4px_rgba(0,0,0,0.4)] h-10 px-5 text-sm font-medium transition-all duration-300" })}>
               Pick-up & Return Gratuit
               <ArrowRight className="w-4 h-4 ml-1.5 group-hover:translate-x-1 transition-transform duration-200" />
-            </Button>
+            </Link>
           </div>
 
           {/* Interfață Mobilă: Sheet */}
