@@ -149,7 +149,7 @@ export default function Footer() {
                 <p className="font-bold text-slate-800 dark:text-slate-200">Sâmbătă – Duminică</p>
                 <p className="text-xs text-rose-700 dark:text-rose-300 mt-0.5 italic">Închis</p>
               </li>
-              <li className="pt-2 border-t border-slate-200 dark:border-slate-900 flex items-center gap-2 text-xs font-semibold text-emerald-700 dark:text-emerald-300">
+              <li className="pt-2 border-t border-slate-200 dark:border-slate-900 hidden md:flex items-center gap-2 text-xs font-semibold text-emerald-700 dark:text-emerald-300">
                 <ShieldCheck className="w-4 h-4 shrink-0" />
                 Fără costuri ascunse
               </li>
@@ -163,11 +163,11 @@ export default function Footer() {
           <p className="text-slate-600 dark:text-zinc-400">
             Copyright &copy; {currentYear}{" "}COMPUTER SHOP &amp; SERVICE. Toate drepturile rezervate.
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap justify-center items-center gap-x-2 gap-y-2 sm:gap-4">
             <Link href="#" className="hover:text-blue-600 dark:hover:text-white transition-colors">Politică de Confidențialitate</Link>
-            <span className="text-slate-300 dark:text-slate-700">&bull;</span>
+            <span className="text-slate-300 dark:text-slate-700 hidden sm:inline">&bull;</span>
             <Link href="#" className="hover:text-blue-600 dark:hover:text-white transition-colors">Termeni și Condiții</Link>
-            <span className="text-slate-300 dark:text-slate-700">&bull;</span>
+            <span className="text-slate-300 dark:text-slate-700 hidden sm:inline">&bull;</span>
             <Link href="#" className="hover:text-blue-600 dark:hover:text-white transition-colors">ANPC</Link>
           </div>
         </div>

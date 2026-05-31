@@ -104,7 +104,7 @@ export default function Navbar() {
                 <path d="M50 20 C60 20, 70 30, 70 50 C70 70, 50 80, 40 70 C30 60, 30 40, 50 30" stroke="url(#swirlGradNew)" strokeWidth="6" strokeLinecap="round" fill="none" />
               </svg>
             </div>
-            <span className="font-bold tracking-tight text-slate-900 dark:text-white text-sm md:text-base leading-none">
+            <span className="font-bold tracking-tight text-slate-900 dark:text-white text-sm md:text-base leading-none truncate max-w-[150px] sm:max-w-none">
               COMPUTER SHOP AND SERVICE
             </span>
           </Link>
