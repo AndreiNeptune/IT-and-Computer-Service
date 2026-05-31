@@ -47,7 +47,7 @@ html {
 }
 
 body {
-  background-color: var(--background);
+  background-color: #030712;
   font-family: var(--font-sans);
 }
 
@@ -155,7 +155,7 @@ body {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#030712] text-foreground;
   }
   html {
     @apply font-sans;
