@@ -92,7 +92,7 @@ export default function ContactForm() {
   ];
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/30 transition-colors">
+    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/30">
       <div className="max-w-4xl mx-auto">
         
         {/* Header */}

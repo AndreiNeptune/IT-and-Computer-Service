@@ -145,7 +145,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 flex flex-col font-sans transition-colors duration-300">
+      <body className="min-h-full bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 flex flex-col font-sans">
         <PostHogProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="relative flex min-h-screen flex-col bg-white dark:bg-slate-950">

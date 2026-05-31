@@ -34,7 +34,7 @@ export default function WindowsHome() {
   ];
 
   return (
-    <section id="windows-home" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300 border-y border-slate-200 dark:border-slate-800">
+    <section id="windows-home" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white relative overflow-hidden border-y border-slate-200 dark:border-slate-800">
       {/* Background Decorative Glows */}
       <div className="absolute top-1/2 left-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />

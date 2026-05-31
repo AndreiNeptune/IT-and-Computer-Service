@@ -52,7 +52,7 @@ export default function ServicesTabs() {
   };
 
   return (
-    <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-950 transition-colors">
+    <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-950">
       <div className="max-w-7xl mx-auto">
         
         {/* Badges Section for Quick Troubleshooting Guidance */}

@@ -27,7 +27,7 @@ export default function Gallery() {
   ];
 
   return (
-    <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50 transition-colors border-b border-slate-100 dark:border-slate-900">
+    <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50 border-b border-slate-100 dark:border-slate-900">
       <div className="max-w-7xl mx-auto">
         
         {/* Header */}

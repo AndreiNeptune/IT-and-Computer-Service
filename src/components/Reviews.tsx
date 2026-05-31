@@ -44,7 +44,7 @@ export default function Reviews() {
   const activeReview = reviewsData[activeIndex];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-950 transition-colors border-b border-slate-100 dark:border-slate-900">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-900">
       <div className="max-w-4xl mx-auto">
         
         {/* Header */}

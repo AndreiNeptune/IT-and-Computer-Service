@@ -12,7 +12,7 @@ export default function Home() {
       <Hero />
 
       {/* Services Grid (Replacement for ServicesTabs & WindowsHome) */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-950 transition-colors">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <h2 className="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-3">

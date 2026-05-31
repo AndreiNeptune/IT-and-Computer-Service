@@ -32,7 +32,7 @@ export default function PickUpReturn() {
   ];
 
   return (
-    <section id="pickup-return" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50 transition-colors">
+    <section id="pickup-return" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
       <div className="max-w-7xl mx-auto">
         
         {/* Header */}
