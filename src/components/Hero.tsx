@@ -11,8 +11,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-70" />
       
       {/* Glowing light blobs */}
-      <div className="absolute top-10 left-1/4 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-purple-600/25 rounded-full blur-3xl animate-[pulse_6s_ease-in-out_infinite]" />
+      <div className="absolute top-10 left-1/4 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl will-change-transform transform-gpu" />
+      <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-purple-600/25 rounded-full blur-3xl animate-[pulse_6s_ease-in-out_infinite] will-change-transform transform-gpu" />
 
       {/* Fade out to the next section */}
       <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-t from-white dark:from-slate-950 to-transparent z-0 pointer-events-none" />

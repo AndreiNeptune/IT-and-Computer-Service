@@ -8,12 +8,9 @@ export default function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Check if user has already accepted cookies
     const cookieConsent = localStorage.getItem("cookie_consent_accepted");
     if (!cookieConsent) {
-      // Small delay before showing the banner
-      const timer = setTimeout(() => setIsVisible(true), 1500);
-      return () => clearTimeout(timer);
+      setIsVisible(true);
     }
   }, []);
 
