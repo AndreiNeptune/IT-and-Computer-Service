@@ -104,7 +104,7 @@ export default function Navbar() {
                 <path d="M50 20 C60 20, 70 30, 70 50 C70 70, 50 80, 40 70 C30 60, 30 40, 50 30" stroke="url(#swirlGradNew)" strokeWidth="6" strokeLinecap="round" fill="none" />
               </svg>
             </div>
-            <span className="font-bold tracking-tight text-slate-900 dark:text-white text-sm md:text-base leading-none truncate max-w-[150px] sm:max-w-none">
+            <span className="font-bold tracking-tight text-slate-900 dark:text-white text-sm md:text-base leading-none hidden sm:block">
               COMPUTER SHOP AND SERVICE
             </span>
           </Link>
@@ -135,7 +135,7 @@ export default function Navbar() {
           <div className="flex md:hidden items-center space-x-2">
             <ThemeToggle className="p-2.5 rounded-xl bg-slate-100 dark:bg-white/[0.03] border border-slate-200 dark:border-white/[0.08] text-slate-600 dark:text-white hover:bg-slate-200 dark:hover:bg-white/[0.08] transition-all focus:outline-none" />
             <Sheet>
-              <SheetTrigger render={<Button variant="ghost" size="icon" className="rounded-lg text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-white/[0.08] hover:text-blue-600 dark:hover:text-white" />}>
+              <SheetTrigger render={<button className="p-2.5 rounded-xl bg-slate-100 dark:bg-white/[0.03] border border-slate-200 dark:border-white/[0.08] text-slate-600 dark:text-white hover:bg-slate-200 dark:hover:bg-white/[0.08] transition-all focus:outline-none flex items-center justify-center" />}>
                 <Menu className="w-5 h-5" />
                 <span className="sr-only">Deschide meniul</span>
               </SheetTrigger>
