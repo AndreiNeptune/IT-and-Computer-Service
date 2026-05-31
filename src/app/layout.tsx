@@ -7,10 +7,11 @@ import Footer from "@/components/Footer";
 import dynamic from "next/dynamic";
 import { cn } from "@/lib/utils";
 
+import CookieBanner from "@/components/CookieBanner";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
+
 const PostHogProvider = dynamic(() => import("@/components/PostHogProvider").then(mod => mod.PostHogProvider));
-const CookieBanner = dynamic(() => import("@/components/CookieBanner"));
 const BackToTop = dynamic(() => import("@/components/BackToTop"));
-const StickyMobileCTA = dynamic(() => import("@/components/StickyMobileCTA"));
 const WhatsAppWidget = dynamic(() => import("@/components/WhatsAppWidget"));
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
