@@ -31,7 +31,7 @@ export default function Navbar() {
   return (
     <>
       {/* Top Bar Discret (Desktop) */}
-      <div className="hidden md:flex h-9 bg-transparent border-b border-white/[0.02]">
+      <div className="hidden md:flex h-9 bg-[#030712] border-b border-white/[0.02]">
         <div className="max-w-7xl mx-auto px-6 w-full h-full flex items-center justify-between">
           <div className="text-xs font-normal text-zinc-400 flex items-center space-x-6">
             <a href="mailto:office@servicecomputer.ro" className="flex items-center space-x-2 hover:text-white transition-colors duration-200">
