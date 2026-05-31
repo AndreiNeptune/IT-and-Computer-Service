@@ -6,9 +6,9 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-slate-950 text-white py-20 lg:py-28 px-4 sm:px-6 lg:px-8 border-b border-slate-900">
+    <section className="relative overflow-hidden bg-white dark:bg-[#030712] text-slate-900 dark:text-white py-20 lg:py-28 px-4 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-slate-900 transition-colors duration-300">
       {/* Background cyber grid & colorful blobs */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-70" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-70 transition-colors duration-300" />
       
       {/* Glowing light blobs */}
       <div className="absolute top-10 left-1/4 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl" />
@@ -43,7 +43,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg sm:text-xl text-slate-300 font-medium mb-4"
+            className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 font-medium mb-4"
           >
             Vă așteptăm la magazinele noastre din sectoarele 2 și 4.
           </motion.p>
@@ -51,11 +51,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25 }}
-            className="text-slate-400 max-w-2xl text-sm sm:text-base mb-10 leading-relaxed"
+            className="text-slate-500 dark:text-slate-400 max-w-2xl text-sm sm:text-base mb-10 leading-relaxed"
           >
             Echipă de profesioniști dedicată reparațiilor hardware și software rapide. 
             Oferim servicii calitative, diagnoză corectă și logistică gratuită 
-            prin serviciul specializat de <strong>Pick-Up &amp; Return</strong>.
+            prin serviciul specializat de <strong className="text-slate-700 dark:text-white">Pick-Up &amp; Return</strong>.
           </motion.p>
 
           <motion.div
@@ -73,7 +73,7 @@ export default function Hero() {
             </Link>
             <Link
               href="/instalare-windows"
-              className="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 font-bold py-4 px-8 rounded-2xl transition-all hover:-translate-y-0.5 text-base"
+              className="inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 text-slate-900 dark:text-slate-100 font-bold py-4 px-8 rounded-2xl transition-all hover:-translate-y-0.5 text-base"
             >
               Instalare Windows la Domiciliu
             </Link>
