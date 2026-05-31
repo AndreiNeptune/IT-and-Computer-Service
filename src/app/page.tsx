@@ -1,7 +1,9 @@
 import Hero from "@/components/Hero";
-import Reviews from "@/components/Reviews";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Laptop, Monitor, MonitorUp } from "lucide-react";
+
+const Reviews = dynamic(() => import("@/components/Reviews"));
 
 export default function Home() {
   return (
