@@ -125,13 +125,15 @@ export default function Reviews() {
                     setDirection(idx > activeIndex ? 1 : -1);
                     setActiveIndex(idx);
                   }}
-                  className={`relative before:content-[''] before:absolute before:-top-3 before:-bottom-3 before:-left-3 before:-right-3 w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${
+                  className="p-3 -mx-2 -my-3 cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-full"
+                  aria-label={`Mergi la mărturia ${idx + 1}`}
+                >
+                  <div className={`h-2.5 rounded-full transition-all ${
                     idx === activeIndex
                       ? "bg-blue-600 dark:bg-blue-400 w-6"
-                      : "bg-slate-300 dark:bg-slate-700"
-                  }`}
-                  aria-label={`Mergi la mărturia ${idx + 1}`}
-                />
+                      : "bg-slate-300 dark:bg-slate-700 w-2.5"
+                  }`} />
+                </button>
               ))}
             </div>
 
