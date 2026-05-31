@@ -161,7 +161,7 @@ export default function Footer() {
         {/* Footer bottom bar */}
         <div className="pt-8 mt-8 border-t border-slate-200 dark:border-slate-900/80 text-center flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
           <p className="text-slate-500 dark:text-slate-500">
-            Copyright &copy; {currentYear} COMPUTER SHOP &amp; SERVICE. Toate drepturile rezervate.
+            Copyright &copy; {currentYear}{" "}COMPUTER SHOP &amp; SERVICE. Toate drepturile rezervate.
           </p>
           <div className="flex gap-4">
             <Link href="#" className="hover:text-blue-600 dark:hover:text-white transition-colors">Politică de Confidențialitate</Link>
