@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Outfit, Geist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { PostHogProvider } from "@/components/PostHogProvider";
@@ -9,6 +9,10 @@ import CookieBanner from "@/components/CookieBanner";
 import BackToTop from "@/components/BackToTop";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+
 const outfit = Outfit({
   subsets: ["latin"],
   display: "swap",
@@ -129,7 +133,7 @@ export default function RootLayout({
   return (
     <html
       lang="ro"
-      className={`${outfit.variable} h-full antialiased`}
+      className={cn("h-full", "antialiased", outfit.variable, "font-sans", geist.variable)}
       suppressHydrationWarning
     >
       <head>
@@ -138,9 +142,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 flex flex-col font-sans transition-colors duration-300">
+      <body className="min-h-full bg-slate-50 text-slate-900 dark:bg-[#030712] dark:text-slate-100 flex flex-col font-sans transition-colors duration-300">
         <PostHogProvider>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
             <Navbar />
             <main className="flex-1">
               {children}
