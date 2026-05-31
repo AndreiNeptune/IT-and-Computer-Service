@@ -133,7 +133,8 @@ export default function RootLayout({
   return (
     <html
       lang="ro"
-      className={cn("h-full", "antialiased", outfit.variable, "font-sans", geist.variable)}
+      className={cn("h-full bg-white dark:bg-slate-950 antialiased", outfit.variable, "font-sans", geist.variable)}
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
       <head>
@@ -145,11 +146,13 @@ export default function RootLayout({
       <body className="min-h-full bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 flex flex-col font-sans transition-colors duration-300">
         <PostHogProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <Navbar />
-            <main className="flex-1">
-              {children}
-            </main>
-            <Footer />
+            <div className="relative flex min-h-screen flex-col bg-white dark:bg-slate-950">
+              <Navbar />
+              <main className="flex-1">
+                {children}
+              </main>
+              <Footer />
+            </div>
             <CookieBanner />
             <BackToTop />
             <StickyMobileCTA />
