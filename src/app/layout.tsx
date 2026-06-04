@@ -150,6 +150,8 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <link rel="preconnect" href="https://eu.i.posthog.com" />
+        <link rel="preconnect" href="https://eu-assets.i.posthog.com" />
       </head>
       <body className="min-h-full bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 flex flex-col font-sans">
         <PostHogProvider>
